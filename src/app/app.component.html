@@ -1,24 +1,4 @@
-<mat-toolbar color="primary">
-  Sign Up Flow with Firebase
-  <ng-container *ngIf="user$ | async as user; else loginButton">
-    <button mat-button [matMenuTriggerFor]="userMenu">
-      <img
-        width="30"
-        height="30"
-        class="profile-image-toolbar"
-        [src]="user.photoURL ?? 'assets/images/image-placeholder.png'"
-      />
-      {{ user.displayName }}
-      <mat-icon>expand_more</mat-icon>
-    </button>
-  </ng-container>
-  <ng-template #loginButton>
-    <button mat-button routerLink="login">
-      <mat-icon>login</mat-icon>
-      Login
-    </button>
-  </ng-template>
-</mat-toolbar>
+
 
 <div class="content">
   <router-outlet></router-outlet>
@@ -34,3 +14,4 @@
     Logout
   </button>
 </mat-menu>
+

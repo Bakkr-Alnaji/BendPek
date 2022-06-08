@@ -9,11 +9,11 @@ import {
   redirectLoggedInTo,
   redirectUnauthorizedTo,
 } from '@angular/fire/auth-guard';
-import { ProfileComponent } from './components/profile/profile.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
 
+// The routes I will be using
 const routes: Routes = [
   {
     path: '',
@@ -33,11 +33,6 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    ...canActivate(redirectUnauthorizedToLogin),
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent,
     ...canActivate(redirectUnauthorizedToLogin),
   },
 ];
