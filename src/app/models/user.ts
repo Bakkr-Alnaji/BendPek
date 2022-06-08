@@ -1,4 +1,3 @@
-
 export interface ProfileUser {
   uid: string;
   email?: string;

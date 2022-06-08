@@ -9,9 +9,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
-import { forkJoin } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { ProfileUser } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
 import { UsersService } from 'src/app/services/users.service';
 
