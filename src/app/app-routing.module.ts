@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: LandingComponent,
+    component: SignUpComponent, //should be landing page...meh
   },
   {
     path: 'login',

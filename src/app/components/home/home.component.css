@@ -1,3 +1,5 @@
+
+/* global styles */
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +7,7 @@
   list-style-position: none;
   list-style: none;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'quicksand';
 }
 
 .sidebar {
@@ -15,7 +17,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background: rgb(156, 156, 223);
+  background: rgb(35, 35, 44);
   transition: width 300ms;
 }
 
@@ -36,12 +38,26 @@
   padding-left: 1rem;
 }
 
+.sidebar-menu h1 {
+  color: rgb(107, 101, 107);
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 1.7rem;
+  padding-left: 1rem;
+
+}
+
 .sidebar-menu a {
   display: block;
   color: #fff;
   font-size: 1.1rem;
 
 }
+
+.sidebar-menu .dropdown{
+  min-width: 15em;
+}
+
 
 .sidebar-menu a.active {
   background: white;
@@ -73,15 +89,16 @@
   padding-right: 0rem;
 }
 
+
+/* Once sidebar minimized, remove sidebar menu name */
 #nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
 #nav-toggle:checked+.sidebar li a span:last-child {
   display: none;
 }
 
-
-/* Once sidebar minimized, remove sidebar menu name */
+/* remove menu title (core, interface, add ons) when side bar is mini */
 #nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
-#nav-toggle:checked+.sidebar li a span:last-child {
+#nav-toggle:checked+.sidebar h1 {
   display: none;
 }
 
@@ -96,6 +113,7 @@
   left: 70px;
 
 }
+
 /* End of mini sidebar styling */
 .sidebar-menu {
 
@@ -128,6 +146,12 @@ header h2 {
 header label span {
   font-size: 1.7rem;
   padding-right: 1rem;
+}
+
+main{
+  margin-top: 180px;
+  padding: 2rem 1.5rem;
+
 }
 
 .search-wrapper {

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './services/auth.service';
-import { UsersService } from './services/users.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +8,12 @@ import { UsersService } from './services/users.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  user$ = this.usersService.currentUserProfile$;
 
   constructor(
     private authService: AuthService,
-    public usersService: UsersService,
     private router: Router
   ) {}
-
+// for future use if I want to add logout feature...why not
   logout() {
     this.authService.logout().subscribe(() => {
       this.router.navigate(['/']);

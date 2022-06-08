@@ -20,7 +20,6 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { LandingComponent } from './components/landing/landing.component';
 import { MatMenuModule } from '@angular/material/menu';
-// import { ProfileComponent } from './components/profile/profile.component';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 
 @NgModule({
@@ -30,7 +29,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     SignUpComponent,
     LandingComponent,
     HomeComponent,
-  
+
   ],
   imports: [
     BrowserModule,

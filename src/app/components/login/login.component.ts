@@ -21,29 +21,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get email() {
-    return this.loginForm.get('email');
-  }
-
-  get password() {
-    return this.loginForm.get('password');
-  }
-
   submit() {
     if (!this.loginForm.valid) {
       return;
     }
 
-    const { email, password } = this.loginForm.value;
-    this.authService.login(email, password).pipe(
-      this.toast.observe({
-        success: 'Logged in successfully',
-        loading: 'Logging in...',
-        error: ({ message }) => `There was an error: ${message} `
-      })
-    ).subscribe(() => {
-      this.router.navigate(['/home']);
-    });
 
   }
 
